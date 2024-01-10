@@ -23,7 +23,19 @@ const createCells = (number) => {
 // - 4 Creo un event listener al click del bottone
 button.addEventListener('click', () => {
     for (let i = 1; i <= totalCells; i++) {
-        const cells = createCells(i);
-        resultElement.appendChild(cells);
+
+        // - 5 Creiamo una cella
+        const newCells = createCells(i);
+
+        // - 6 Creo un event listener al click della cella
+        newCells.addEventListener('click', () => {
+
+            // - 7 Al click aggiungo la classe clicked e la classe c-wh per cambiare il colore al testo
+            newCells.classList.toggle('clicked');
+            newCells.classList.toggle('c-wh');
+        })
+
+        // - 8 Stampo in pagina le celle
+        resultElement.appendChild(newCells);
     }
 })
