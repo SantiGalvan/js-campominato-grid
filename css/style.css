@@ -23,3 +23,26 @@ head {
     width: 100px;
     display: block;
 }
+
+/*? Main */
+
+/* Section Grid */
+#section-grid {
+    background-color: #7fffd4;
+    height: 750px;
+    padding: 25px 0;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 700px;
+    width: 700px;
+}
+
+.cell {
+    height: calc(100% / 10);
+    width: calc(100% / 10);
+    border: 1px solid black;
+    flex-shrink: 0;
+}
