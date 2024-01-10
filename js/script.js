@@ -18,7 +18,7 @@ const createCells = (number) => {
     newCell.classList.add('cell');
     newCell.innerText = number;
     return newCell;
-}
+};
 
 // - 4 Creo un event listener al click del bottone
 button.addEventListener('click', () => {
@@ -27,15 +27,21 @@ button.addEventListener('click', () => {
         // - 5 Creiamo una cella
         const newCells = createCells(i);
 
+        // - 8 Creo il messaggio da stampare in console al click
+        const message = 'Hai cliccato la cella numero: ' + i;
+
         // - 6 Creo un event listener al click della cella
         newCells.addEventListener('click', () => {
 
             // - 7 Al click aggiungo la classe clicked e la classe c-wh per cambiare il colore al testo
             newCells.classList.toggle('clicked');
             newCells.classList.toggle('c-wh');
+
+            // - 9 Stampo il messaggio
+            console.log(message);
         })
 
-        // - 8 Stampo in pagina le celle
+        // - 10 Stampo in pagina le celle
         resultElement.appendChild(newCells);
     }
-})
+});
