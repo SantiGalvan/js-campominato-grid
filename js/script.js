@@ -19,3 +19,11 @@ const createCells = (number) => {
     newCell.innerText = number;
     return newCell;
 }
+
+// - 4 Creo un event listener al click del bottone
+button.addEventListener('click', () => {
+    for (let i = 1; i <= totalCells; i++) {
+        const cells = createCells(i);
+        resultElement.appendChild(cells);
+    }
+})
