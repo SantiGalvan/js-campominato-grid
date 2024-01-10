@@ -3,13 +3,11 @@ console.log('JS OK');
 // - 1 Recupero gli elementi dal DOM - Retrieve elements from the DOM
 const button = document.querySelector('button');
 const resultElement = document.querySelector('#section-grid .grid');
-console.log(button, resultElement);
 
 // - 2 Creo le variabili per le righe e le colonne
 const rows = 10;
 const cells = 10;
 const totalCells = rows * cells;
-console.log(totalCells);
 
 // ? FUNZIONI 
 // - 3 Creo la funzione per la cella
@@ -22,6 +20,7 @@ const createCells = (number) => {
 
 // - 4 Creo un event listener al click del bottone
 button.addEventListener('click', () => {
+
     for (let i = 1; i <= totalCells; i++) {
 
         // - 5 Creiamo una cella
