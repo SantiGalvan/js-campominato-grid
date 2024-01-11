@@ -51,8 +51,12 @@ head {
     width: calc(100% / 10);
     border: 1px solid black;
     flex-shrink: 0;
-    text-align: center;
-    line-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
 }
 
 .clicked {
