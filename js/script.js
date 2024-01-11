@@ -21,6 +21,9 @@ const createCells = (number) => {
 // - 4 Creo un event listener al click del bottone
 button.addEventListener('click', () => {
 
+    // - 11 Evito che generi la griglia più volte
+    resultElement.innerHTML = '';
+
     for (let i = 1; i <= totalCells; i++) {
 
         // - 5 Creiamo una cella
