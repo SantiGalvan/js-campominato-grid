@@ -21,8 +21,11 @@ const createCells = (number) => {
     return newCell;
 };
 
-// - 4 Creo un event listener al click del bottone
-button.addEventListener('click', () => {
+// - 4 Creo un event listener al submit del form
+formElement.addEventListener('submit', (event) => {
+
+    // - 12 Evito che ricarichi la pagina
+    event.preventDefault();
 
     // - 11 Evito che generi la griglia più volte
     resultElement.innerHTML = '';
