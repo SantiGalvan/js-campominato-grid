@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+/* Roots */
+:root {
+    --cols-for-rows: 10;
+}
+
 /* General */
 body {
     font-family: 'Montserrat', sans-serif;
@@ -47,8 +52,8 @@ head {
 }
 
 .cell {
-    height: calc(100% / 10);
-    width: calc(100% / 10);
+    height: calc(100% / var(--cols-for-rows));
+    width: calc(100% / var(--cols-for-rows));
     border: 1px solid black;
     flex-shrink: 0;
 
