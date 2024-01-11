@@ -30,6 +30,32 @@ formElement.addEventListener('submit', (event) => {
     // - 11 Evito che generi la griglia più volte
     resultElement.innerHTML = '';
 
+    // - 13 Creo una variabile per il valore della select
+    const level = selectElement.value;
+
+    // - 2 Creo le variabili per le righe e le colonne
+    let rows = 10;
+    let cols = 10;
+
+    // - 14 Creo lo switch per le difficoltà
+    switch (level) {
+        case 'normal':
+            rows = 9;
+            cols = 9;
+            break;
+        case 'hard':
+            rows = 7;
+            cols = 7;
+            break;
+    }
+
+    // - 15 Cambio il valore della root in CSS in base al livello
+    const root = document.querySelector(':root');
+    root.style.setProperty('--cols-for-rows', cols);
+
+    // - Variabile con il totale delle celle
+    const totalCells = rows * cols;
+
     for (let i = 1; i <= totalCells; i++) {
 
         // - 5 Creiamo una cella
